@@ -1,9 +1,3 @@
-======================================================
-PREGUNTA DE C++: OPERADORES DE INCREMENTO Y ASIGNACIÓN
-======================================================
-
-CÓDIGO:
--------
 #include <iostream>
 using namespace std;
 
@@ -14,47 +8,3 @@ int main() {
     cout << x << " " << y;
     return 0;
 }
-
-OPCIONES:
----------
-A) 6 5
-B) 6 6
-C) 7 5
-D) 5 6
-
-------------------------------------------------------
-1. RESULTADO REAL EN C++ (AL COMPILAR Y EJECUTAR)
-------------------------------------------------------
-Salida en consola: 11 6
-
-PASO A PASO:
-1) int x = 4;
-   - x inicia con el valor 4.
-
-2) int y = ++x;
-   - Al ser pre-incremento (++x), x aumenta primero a 5.
-   - Se asigna ese 5 a y.
-   - Estado actual: x = 5, y = 5.
-
-3) x = x++ + ++y;
-   - ++y (pre-incremento): incrementa y a 6 y entrega el valor 6.
-   - x++ (post-incremento): entrega el valor actual de x que es 5.
-   - Operación suma: 5 + 6 = 11.
-   - Asignación: x toma el valor 11.
-   - Estado final: x = 11, y = 6.
-
-4) cout << x << " " << y;
-   - Imprime: 11 6
-
-(Nota técnica: En C++, modificar x con x++ y a la vez asignarle un valor en la misma instrucción involucra una operación no secuenciada / comportamiento no recomendado, pero en compiladores estándar modernos el resultado efectivo es 11 6).
-
-------------------------------------------------------
-2. OPCIÓN ESPERADA SEGÚN EL AUTOR DEL TEST/CUESTIONARIO
-------------------------------------------------------
-Opción prevista en el test: D) 5 6
-
-EXPLICACIÓN DEL ERROR DEL CUESTIONARIO:
-En este tipo de preguntas de opción múltiple de redes sociales, el autor suele cometer una confusión de seguimiento:
-- Supone que tras y = ++x se tiene x = 5 e y = 5.
-- En x = x++ + ++y, interpreta que ++y sube y a 6, pero asume erróneamente que x++ mantiene a x en 5 (o que x = x++ asigna 5 a x), ignorando la suma matemática de los operandos (5 + 6).
-- Por ese motivo, en la plantilla del examen suelen marcar como correcta la D) 5 6.
