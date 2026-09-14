@@ -4,17 +4,11 @@
 using namespace std;
 
 int main() {
-    string nombre1, nombre2;
-    long long puntos1, puntos2;
+    string n1, n2;
+    int p1, p2;
 
-    cin >> nombre1 >> puntos1;
-    cin >> nombre2 >> puntos2;
-
-    if (puntos1 > puntos2) {
-        cout << nombre1 << endl;
-    } else {
-        cout << nombre2 << endl;
-    }
+    cin >> n1 >> p1 >> n2 >> p2;
+    cout << (p1 > p2 ? n1 : n2) << endl;
 
     return 0;
 }
